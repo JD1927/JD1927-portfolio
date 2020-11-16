@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'JD1927';
+
+  constructor() {}
+
+  getPortfolioName(): string {
+    return `Portfolio: ${this.title}`;
+  }
 }
