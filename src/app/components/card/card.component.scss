@@ -1,0 +1,101 @@
+@import './../../../styles.scss';
+
+.card {
+  width: 100%;
+  height: 350px;
+  display: grid;
+  background-color: $bg-primary;
+  grid-template-areas:
+    'icon title title title'
+    'code code page page'
+    'badge badge badge badge';
+
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+  @include e('icon') {
+    grid-area: icon;
+    color: $orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      min-width: 2rem;
+      width: 5rem;
+      margin: 1rem;
+    }
+  }
+
+  @include e('title') {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-weight: 400;
+      margin: 0 10px;
+      color: $text-secondary;
+    }
+  }
+
+  @include e('repository') {
+    grid-area: code;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition-speed;
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: $text-secondary;
+      margin: 0;
+    }
+  }
+
+  @include e('website') {
+    grid-area: page;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition-speed;
+
+    p {
+      font-size: 1rem;
+      color: $text-secondary;
+      margin: 0;
+    }
+  }
+
+  @include e('badges') {
+    grid-area: badge;
+    border-top: 1px solid $orange;
+    color: $text-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include gc('badge') {
+      padding: 0 1rem;
+      color: $orange;
+
+      svg {
+        width: 2.25rem;
+      }
+    }
+  }
+
+}
+
+.card__repository:hover, .card__website:hover {
+  background: $bg-secondary;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
