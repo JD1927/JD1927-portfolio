@@ -6,6 +6,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)
   },
+  {
+    path: 'github',
+    loadChildren: () => import('./components/github/github.module').then(m => m.GithubModule)
+  },
   { path: '', redirectTo: '/home' , pathMatch: 'full' },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];

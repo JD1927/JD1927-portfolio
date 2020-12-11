@@ -1,0 +1,43 @@
+@import './../../../styles.scss';
+
+.github {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include e('item') {
+    background-color: $bg-primary;
+    border-radius: 10px;
+    padding: 1rem;
+
+    @include gc('icon') {
+      color: $orange;
+
+      svg {
+        min-width: 3rem;
+        width: 3rem;
+      }
+    }
+
+    @include gc('name') {
+      color: $text-secondary;
+    }
+
+    @include gc('repo') {
+      color: $text-secondary;
+      cursor: pointer;
+
+    }
+
+    @include gc('clone') {
+      color: $text-secondary;
+    }
+
+    @include gc('branch') {
+      color: $text-secondary;
+    }
+  }
+}
