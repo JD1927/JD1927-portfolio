@@ -2,10 +2,15 @@
 
 .container {
   margin: 0;
-  padding: 7rem 2rem 1rem;
+  padding: 7rem 2rem 8rem;
 
   @include mq-up(sm) {
     margin-left: 5rem;
+    padding-bottom: 2rem;
+  }
+  @include mq-up(md) {
+    margin-left: 5rem;
+    padding-bottom: 1rem;
   }
 }
 
