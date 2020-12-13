@@ -84,10 +84,3 @@ $breakpoints: (
     @content;
   }
 }
-/*
-.block {
-  @include e('element') {}
-  @include m('modifier') {}
-  @include gc('elementChild') {}
-}
-*/
