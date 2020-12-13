@@ -1,6 +1,7 @@
 @import 'mixins';
 @import 'normalize';
 @import 'variables';
+@import 'animate';
 
 html, body {
   font-family: 'Ubuntu', sans-serif;
@@ -16,8 +17,3 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: $orange;
 }
-
-/* body {
-  background-image: linear-gradient(120deg, #77216F, #E95420);
-  background-attachment: fixed;
-} */

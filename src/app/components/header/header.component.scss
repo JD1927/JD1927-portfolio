@@ -5,6 +5,7 @@
   width: 100vw;
   height: 5rem;
   background-color: $bg-primary;
+  z-index: 1;
 
   @include mq-up(sm) {
     margin-left: 5rem;
