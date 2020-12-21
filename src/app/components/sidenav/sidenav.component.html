@@ -1,5 +1,6 @@
 <nav class="navbar">
   <ul class="navbar__nav">
+    <!-- HOME -->
     <li class="navbar__nav-item">
       <a class="link" [routerLink]="['/home']">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="primary-svg" role="img"
@@ -11,6 +12,7 @@
         <span class="link__text">Home</span>
       </a>
     </li>
+    <!-- GITHUB -->
     <li class="navbar__nav-item">
       <a class="link" [routerLink]="['/github']">
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="primary-svg" role="img"
@@ -22,8 +24,9 @@
         <span class="link__text">Github</span>
       </a>
     </li>
+    <!-- ME -->
     <li class="navbar__nav-item">
-      <a href="#" class="link">
+      <a style="cursor: not-allowed" class="link">
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="wolf-pack-battalion" class="primary-svg"
           role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path fill="currentColor"

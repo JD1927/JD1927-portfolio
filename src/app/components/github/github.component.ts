@@ -15,6 +15,7 @@ export class GithubComponent implements OnInit {
 
   githubRepositories: GithubRepo[] = [];
   githubRepositoriesFilter: GithubRepo[] = [];
+  githubSkeleton = new Array(9);
 
   githubSearch: FormControl = new FormControl('');
 
@@ -33,7 +34,9 @@ export class GithubComponent implements OnInit {
 
   searchRepositoryByName(value: string): void {
     if (value && value !== '') {
-      this.githubRepositories = this.githubRepositoriesFilter.filter((repo) => repo.name.match(value));
+      this.githubRepositories = this.githubRepositoriesFilter.filter(
+        (repo) => repo.name.match(value) || (repo.name.match(value.toUpperCase()) || repo.name.match(value.toLowerCase()))
+      );
     } else {
       this.githubRepositories = this.githubRepositoriesFilter;
     }
@@ -42,15 +45,12 @@ export class GithubComponent implements OnInit {
   getPublicRepositoriesByUser(): void {
     this.githubService.getPublicRepositoriesByUser(USER)
     .pipe(
-      delay(3000)
+      delay(2000)
     )
     .subscribe(
       (res) => {
         this.githubRepositories = [...res];
         this.githubRepositoriesFilter = [...res];
-      },
-      (err) => {
-        console.log(err);
       }
     );
   }

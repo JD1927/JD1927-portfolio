@@ -1,0 +1,31 @@
+@import './../../../../styles.scss';
+
+.github {
+  display: grid;
+  grid-template-columns: 3rem 3fr 1fr;
+  column-gap: 15px;
+
+  @include e('icon') {
+    width: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 10px;
+  }
+  @include e('repository') {
+    display: grid;
+    align-items: center;
+
+    ngx-skeleton-loader {
+      margin-bottom: -10px;
+    }
+  }
+  @include e('branch') {
+    display: grid;
+    align-items: center;
+
+    ngx-skeleton-loader {
+      margin-bottom: -10px;
+    }
+  }
+}
