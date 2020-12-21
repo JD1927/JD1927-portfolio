@@ -101,12 +101,3 @@
 .card:hover {
   transform: scale(1.05);
 }
-
-@keyframes fadeInDown {
-  from {opacity:0;transform: translatey(-20px);}
-  to {opacity:1;transform: translatey(0);}
-}
-
-.fade-in-down {
-  animation-name: fadeInDown;
-}
